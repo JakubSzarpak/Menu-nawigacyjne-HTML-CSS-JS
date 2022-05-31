@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+body {
+    background-color: lightslategray;
+}
+
+section {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 1%;
+}
+
+section div {
+    height: 200px;
+    background: tomato;
+    color: white;
+    padding: 30px;
+    border-radius: 14px;
+    min-width: 250px;
+    box-shadow: 12px 0px 32px -12px black;
+    margin-left: -130px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section div:hover {
+    transform: translateY(-16px) rotate(3deg);
+}
+
+section div:hover ~ div {
+    transform: translateX(130px);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#navHTML {
+    margin-left: 45%;
+    top: 220px;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    
+
+}
+
+
+
+.dropbtn {
+  background-color: tomato;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #6d03f8;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  left: 47%;
+  bottom: 250px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+</style>
+
+<body>
+
+<div id="TOP"></div>
+
+<div id="navHTML">
+    <ul>
+    <li><a href="#TOP">Top</a></li>
+    <li><a href="#BOT">Bottom</a></li>
+    <li><a href="#CSS">CSS-menu</a></li>
+    <li><a href="#myBtn">JS+CSS-menu</a></li>
+    </ul>
+</div>
+
+
+<section id="CSS">
+    <a href="#TOP"><div><h1>Top</h1></div></a>
+    <a href="#BOT"><div><h1>Bottom</h1></div></a>
+    <a href="#navHTML"><div><h1>HTML-menu</h1></div></a>
+    <a href="#myBtn"><div><h1>JS+CSS-menu</h1></div></a>
+    
+</section>
+</br>
+
+<div class="dropdown">
+    <button id="button" class="dropbtn">Menu rozwijane</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#TOP">Top</a>
+      <a href="#BOT">Bottom</a>
+      <a href="#navHTML">HTML-menu</a>
+      <a href="#CSS">CSS-menu</a>
+    </div>
+</div>
+
+<script>
+    // Lokalizacja Przycisku i wykonanie funkcji przy .onclick
+    document.getElementById("button").onclick = function() {myFunction()};
+    
+    /* funkcja myFunction przełącza się pomiędzy usuwaniem a dodawaniem klasy show odpowiedzialnej za pokazanie dolnej zawartości */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    </script>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div id="BOT"></div>
+
+
+
+
+</body>
+</html>
